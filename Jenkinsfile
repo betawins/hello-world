@@ -7,16 +7,19 @@ pipeline {
     }
 
     stages {
-        stage ('git chekout') {
+        stage('checkout') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/betawins/hello-world.git'
             }
-       stage('compile'){
-      steps {
-   sh 'mnn compile'
-}
-}
+
+        }
+        stage('build') {
+            steps {
+                // Get some code from a GitHub repository
+               sh 'mvn compile'
+            }
+
         }
     }
 }
