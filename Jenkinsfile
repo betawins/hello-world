@@ -7,14 +7,14 @@ pipeline {
     }
 
     stages {
-        stage('git chekout') {
+        stage ('git chekout') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/betawins/hello-world.git'
             }
        stage('compile'){
-      steps{
-   sh 'mcn compile'
+      steps {
+   sh 'mnn compile'
 }
 }
         }
